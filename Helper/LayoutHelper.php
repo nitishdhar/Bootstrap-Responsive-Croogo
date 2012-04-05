@@ -304,7 +304,7 @@ class LayoutHelper extends AppHelper {
 			'dropdownClass' => 'dropdown',
                         'dropdownMenuClass' => 'dropdown-menu',
                         'toggle' => 'dropdown-toggle',
-                        'menuClass' => 'nav',
+                        'menuClass' => 'nav nav-pills',
 			'element' => 'menu',
 		);
 		$options = array_merge($_options, $options);
