@@ -2,4 +2,9 @@ Bootstrap Responsive Croogo Theme for Croogo CMS using Bootstrap by Twitter - Te
 
 For updates & screenshots visit http://nitishdhar.github.com/Bootstrap-Responsive-Croogo/
 
+How to Use
+===========
+1. Just copy the unzipped folder in /app/View/Themed/
+2. Activate the Theme from admin panel
+
 Note : This theme is still not for production use
