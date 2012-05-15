@@ -1,3 +1,3 @@
 <?php
-	echo $this->Layout->nestedLinks($menu['threaded'], $options);
+	echo $this->Custom->nestedLinks($menu['threaded'], $options);
 ?>

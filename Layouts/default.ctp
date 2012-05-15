@@ -47,7 +47,7 @@
                 <div class="navbar">
                     <div class="navbar-inner">
                         <div class="container visible-desktop">
-                        <?php echo $this->Layout->menu('main', array('dropdown' => true)); ?>
+                        <?php echo $this->Custom->menu('main', array('dropdown' => true)); ?>
                         </div>
                         <div class="container hidden-desktop">
                             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -57,7 +57,7 @@
                             </a>
                             <a class="brand" href="#">Navigation</a>
                             <div class="nav-collapse">
-                        <?php echo $this->Layout->menu('main', array('dropdown' => true)); ?>
+                        <?php echo $this->Custom->menu('main', array('dropdown' => true)); ?>
                             </div>
                         </div>
                     </div>
