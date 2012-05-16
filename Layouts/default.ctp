@@ -21,7 +21,8 @@
         echo $this->Layout->feed();
         echo $this->Html->css(array(
             'bootstrap',
-            'bootstrap-responsive'
+            'bootstrap-responsive',
+            'style'
         ));
         echo $this->Layout->js();
         echo $this->Html->script(array(
@@ -33,8 +34,8 @@
     ?>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row-fluid">
+    <div class="container">
+        <div class="row">
             <div class="span12">
                 <div class="page-header">
                     <h1><?php echo $this->Html->link(Configure::read('Site.title'), '/'); ?> <small><?php echo Configure::read('Site.tagline'); ?></small></h1>
@@ -42,22 +43,19 @@
             </div>
         </div>
 
-       <div class="row-fluid">
+       <div class="row">
             <div class="span12">
                 <div class="navbar">
                     <div class="navbar-inner">
-                        <div class="container visible-desktop">
-                        <?php echo $this->Custom->menu('main', array('dropdown' => true)); ?>
-                        </div>
-                        <div class="container hidden-desktop">
+                        <div class="container">
                             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                             </a>
-                            <a class="brand" href="#">Navigation</a>
+                            <span class="hidden-desktop"><a href="#" class="brand">Navigation</a></span>
                             <div class="nav-collapse">
-                        <?php echo $this->Custom->menu('main', array('dropdown' => true)); ?>
+                            <?php echo $this->Custom->menu('main', array('dropdown' => true)); ?>
                             </div>
                         </div>
                     </div>
@@ -65,7 +63,7 @@
             </div>
         </div>
 
-        <div class="row-fluid">
+        <div class="row">
             <div class="span8">
             <?php
                 echo $this->Layout->sessionFlash();
@@ -80,7 +78,7 @@
             </div>
         </div>
 
-        <div class="row-fluid">
+        <div class="row">
             <div class="span12">
                 <div class="span6">
                     Theme by <a href="http://www.linkedin.com/profile/view?id=76383741&trk=tab_pro">Nitish Dhar</a> Powered by <a href="http://www.croogo.org">Croogo</a>.

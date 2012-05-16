@@ -1,0 +1,9 @@
+/* 
+Add custom Styles here 
+
+Can be used to override bootstrap css definition
+*/
+
+.text-center {text-align: center;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
