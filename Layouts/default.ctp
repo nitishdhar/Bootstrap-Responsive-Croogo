@@ -80,11 +80,13 @@
 
         <div class="row">
             <div class="span12">
-                <div class="span6">
+                <div class="well">
+                <div class="span5">
                     Theme by <a href="http://www.linkedin.com/profile/view?id=76383741&trk=tab_pro">Nitish Dhar</a> Powered by <a href="http://www.croogo.org">Croogo</a>.
                 </div>
-                <div class="span1 offset5">
+                <div class="span1 offset4">
                     <a href="http://www.cakephp.org"><?php echo $this->Html->image('/img/cake.power.gif'); ?></a>
+                </div>
                 </div>
             </div>
         </div>
