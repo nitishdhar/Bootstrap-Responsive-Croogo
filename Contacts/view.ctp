@@ -18,11 +18,12 @@
 		echo $this->Form->input('Message.name', array('label' => __('Your name')));
 		echo $this->Form->input('Message.email', array('label' => __('Your email')));
 		echo $this->Form->input('Message.title', array('label' => __('Subject')));
-		echo $this->Form->input('Message.body', array('label' => __('Message')));
+		echo $this->Form->input('Message.body', array('label' => __('Message'), 'style' => 'width: 95%'));
 		if ($contact['Contact']['message_captcha']) {
 			echo $this->Recaptcha->display_form();
 		}
-		echo $this->Form->end(__('Send'));
+		echo $this->Form->submit('Send', array('class' => 'btn btn-success'));
+                echo $this->Form->end();
 	?>
 	</div>
 	<?php } ?>
