@@ -12,4 +12,5 @@ Can be used to override bootstrap css definition
 
 
 .block-title { margin-bottom: 10px; }
+.node {margin-bottom: 15px;}
 .node, .comments {padding-left: 10px;}
