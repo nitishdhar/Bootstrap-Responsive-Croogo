@@ -1,4 +1,5 @@
 <div class="node-more-info">
+    <em>
 <?php
 	$type = $types_for_layout[$this->Layout->node('type')];
 
@@ -34,4 +35,5 @@
 		echo $this->Html->link($commentCount, $this->Html->url($this->Layout->node('url'), true) . '#comments');
 	}
 ?>
+    </em>
 </div>

@@ -10,9 +10,10 @@
 			}
 		?>
 		</span>
-		<span class="date"><?php echo sprintf(__('said on %s'), $this->Time->format(Configure::read('Comment.date_time_format'), $comment['Comment']['created'], null, Configure::read('Site.timezone'))); ?></span>
-	</div>
-	<div class="comment-body"><?php echo nl2br($this->Text->autoLink($comment['Comment']['body'])); ?></div>
+		<span class="date italicize"><em><?php echo sprintf(__('said on %s'), $this->Time->format(Configure::read('Comment.date_time_format'), $comment['Comment']['created'], null, Configure::read('Site.timezone'))); ?></em></span>
+	<br/><br/>
+        </div>
+	<div class="comment-body well"><?php echo nl2br($this->Text->autoLink($comment['Comment']['body'])); ?></div>
 	<div class="comment-reply">
 	<?php
 		if ($level <= Configure::read('Comment.level')) {
@@ -20,12 +21,16 @@
 				'controller' => 'comments',
 				'action' => 'add',
 				$node['Node']['id'],
-				$comment['Comment']['id'],
-			));
+				$comment['Comment']['id']
+                                
+			),
+                        array(
+                                'class' => 'btn btn-success'
+                        ));
 		}
 	?>
 	</div>
-
+        <div class="clear">&nbsp;<br/></div>
 	<?php
 		if (isset($comment['children']) && count($comment['children']) > 0) {
 			foreach ($comment['children'] AS $childComment) {

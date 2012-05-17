@@ -1,4 +1,4 @@
-<div class="node-info">
+<span class="node-info">
 <?php
 	$type = $types_for_layout[$this->Layout->node('type')];
         echo "<em>";
@@ -22,4 +22,4 @@
 	}
         echo "</em>";
 ?>
-</div>
+</span>

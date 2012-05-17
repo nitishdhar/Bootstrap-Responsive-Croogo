@@ -7,7 +7,7 @@
 		$commentHeading .= __('Comments');
 	}
 	echo $this->Html->tag('h3', $commentHeading);
-
+        echo '<br/>';
 	foreach ($comments AS $comment) {
 		echo $this->element('comment', array('comment' => $comment, 'level' => 1));
 	}

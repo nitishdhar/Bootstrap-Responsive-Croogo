@@ -1,5 +1,5 @@
 <div class="comment-form">
-	<h3><?php echo __('Add new comment'); ?></h3>
+	<h3><?php echo __('Add New Comment'); ?></h3>
 	<?php
 		$type = $types_for_layout[$node['Node']['type']];
 
@@ -17,7 +17,7 @@
 			$formUrl[] = $parentId;
 		}
 
-		echo $this->Form->create('Comment', array('url' => $formUrl));
+		echo $this->Form->create('Comment', array('url' => $formUrl, 'class' => 'well'));
 			if ($this->Session->check('Auth.User.id')) {
 				echo $this->Form->input('Comment.name', array(
 					'label' => __('Name'),
@@ -33,18 +33,20 @@
 					'label' => __('Website'),
 					'value' => $this->Session->read('Auth.User.website'),
 					'readonly' => 'readonly',
+                                        
 				));
-				echo $this->Form->input('Comment.body', array('label' => false));
+				echo $this->Form->input('Comment.body', array('label' => false, 'style' => 'width:95%;'));
 			} else {
 				echo $this->Form->input('Comment.name', array('label' => __('Name')));
 				echo $this->Form->input('Comment.email', array('label' => __('Email')));
 				echo $this->Form->input('Comment.website', array('label' => __('Website')));
-				echo $this->Form->input('Comment.body', array('label' => false));
+				echo $this->Form->input('Comment.body', array('label' => false, 'style' => 'width:95%;'));
 			}
 
 			if ($type['Type']['comment_captcha']) {
 				echo $this->Recaptcha->display_form();
 			}
-		echo $this->Form->end(__('Post comment'));
+		 echo $this->Form->submit('Post Comment', array('class' => 'btn btn-success'));
+                echo $this->Form->end();
 	?>
 </div>
