@@ -24,7 +24,7 @@ class CustomHelper extends Helper {
         'Form',
         'Session',
         'Js',
-        'Layout'
+        'Layout',
     );
 
     public function menu($menuAlias, $options = array()) {
